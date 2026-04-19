@@ -1,73 +1,106 @@
-# React + TypeScript + Vite
+# CRUD de Empleados - Empresa TECH
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Descripción del Proyecto
 
-Currently, two official plugins are available:
+Aplicación web desarrollada con React, Vite y TypeScript que permite gestionar empleados mediante un sistema CRUD (Create, Read, Update, Delete).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+El sistema está orientado a una empresa del sector tecnológico, permitiendo la administración eficiente del personal.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tecnologías Utilizadas
 
-## Expanding the ESLint configuration
+- React
+- Vite
+- TypeScript
+- LocalStorage
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Contexto del Sistema
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+La aplicación está diseñada para una empresa de desarrollo de software (TECH), la cual organiza su personal en diferentes áreas según su especialidad técnica.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### Organización de áreas
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Las áreas definidas dentro del sistema son:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- Frontend  
+- Backend  
+- QA (Quality Assurance)  
+- DevOps  
+- UX/UI  
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Cada empleado pertenece a un área específica dentro de la organización.
+
+### Relación entre empleados y roles
+
+Cada empleado desempeña un rol implícito según el área en la que trabaja. Por ejemplo:
+
+- Área Frontend → Desarrollador Frontend  
+- Área Backend → Desarrollador Backend  
+- Área QA → QA Tester  
+- Área DevOps → Ingeniero DevOps  
+- Área UX/UI → Diseñador UX/UI  
+
+Esta relación permite clasificar a los empleados según su especialidad técnica dentro de la empresa.
+
+### Datos relevantes del sistema
+
+El sistema gestiona la siguiente información para cada empleado:
+
+- Nombre  
+- Área o departamento  
+- Salario  
+- Fecha de inicio de contrato  
+- Fecha de finalización de contrato  
+
+### Funcionalidad del sistema
+
+El sistema permite gestionar empleados mediante operaciones CRUD (Crear, Leer, Actualizar y Eliminar), facilitando la administración del personal dentro de la empresa.
+
+---
+
+## Funcionalidades
+
+- Crear empleados  
+- Listar empleados  
+- Editar empleados  
+- Eliminar empleados  
+
+---
+
+## Persistencia de datos
+
+Los datos se almacenan en el navegador utilizando localStorage, lo que permite mantener la información incluso después de recargar la página.
+
+---
+
+## Instalación y ejecución
+
+### 1. Clonar el repositorio
+
+```bash
+git clone https://github.com/GeancarloR07/crud-empleados-tech.git
+
+### 2. Navegar al directorio del proyecto
+
+```bash
+cd crud-empleados-tech
+
+### 3. Instalar dependencias
+
+```bash
+npm install
+
+### 4. Iniciar la aplicación
+
+```bash
+npm run dev
+
+La aplicación estará disponible en `http://localhost:5173` (o el puerto asignado por Vite).
+
+Autor
+
+Geancarlo
+Estudiante de Ingeniería de Sistemas
